@@ -1,3 +1,4 @@
+package Throttle;
 
 public class Throttle {
     private int top;

@@ -1,3 +1,4 @@
+package Statistician;
 public class Statistician {
     
     private double length;

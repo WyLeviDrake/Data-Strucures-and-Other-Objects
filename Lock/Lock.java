@@ -1,3 +1,4 @@
+package Lock;
 public class Lock {
 
     private int x;

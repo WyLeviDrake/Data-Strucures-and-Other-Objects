@@ -1,3 +1,4 @@
+package Clock;
 // File: Clock24.java
 public class Clock24 {
     private int time;

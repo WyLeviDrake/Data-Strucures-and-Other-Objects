@@ -1,3 +1,4 @@
+package Thermometer;
 public class Thermometer {
     
     private double tempC;
@@ -10,7 +11,7 @@ public class Thermometer {
         tempC = temp;
     }
     public void setFahrenheit(double temp) {
-        tempC = (temp - 32) * (5/9);
+        tempC = (temp - 32) * 5 / 9;
     }
 
     public double getCelcius() {
@@ -18,5 +19,12 @@ public class Thermometer {
     }
     public double getFahrenheit() {
         return (tempC * 9/5) + 32;
+    }
+
+    public static void main(String args[]) {
+        Thermometer test = new Thermometer();
+        test.setFahrenheit(90);
+        System.out.println(test.getCelcius());
+        System.out.println(test.getFahrenheit());
     }
 }
