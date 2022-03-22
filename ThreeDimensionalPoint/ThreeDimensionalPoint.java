@@ -53,14 +53,16 @@ public class ThreeDimensionalPoint {
         point[Y] = y;
     }
 
-    public String toString(){
+    public double[] getPoint() {
+        return point;
+    }
+
+    public String toString() {
         return "x" + point[X] + " y" + point[Y] + " z" +point[Z];
     }
 
-    public static void main(String args[]){
-        ThreeDimensionalPoint point1 = new ThreeDimensionalPoint(1, 2, 69);
-        System.out.println(point1);
-        point1.rotateAroundX(6.28319);
+    public static void main(String args[]) {
+        ThreeDimensionalPoint point1 = new ThreeDimensionalPoint();
         System.out.println(point1);
     }
 }
