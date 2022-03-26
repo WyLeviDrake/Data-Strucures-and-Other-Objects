@@ -1,3 +1,5 @@
+package Card;
+
 
 public class Card {
     private int cardRank;

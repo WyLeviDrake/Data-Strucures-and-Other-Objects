@@ -12,6 +12,9 @@ public class Line {
     public void setFirstPoint(double x, double y, double z) {
         firstPoint.setPoint(x, y, z);
     }
+    public void setSecondPoint(double x, double y, double z) {
+        secondPoint.setPoint(x, y, z);
+    }
     public ThreeDimensionalPoint getFirstPoint() {
         return firstPoint;
     }
