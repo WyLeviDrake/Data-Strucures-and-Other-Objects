@@ -1,4 +1,4 @@
-package Clock;
+package Chapter2.Clock;
 // File: Clock.java
 public class Clock
 {

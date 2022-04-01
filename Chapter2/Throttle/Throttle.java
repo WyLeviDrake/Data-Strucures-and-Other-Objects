@@ -1,4 +1,4 @@
-package Throttle;
+package Chapter2.Throttle;
 
 public class Throttle {
     private int top;

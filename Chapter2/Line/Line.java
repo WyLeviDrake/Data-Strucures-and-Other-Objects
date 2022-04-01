@@ -1,5 +1,5 @@
-package Line;
-import ThreeDimensionalPoint.ThreeDimensionalPoint;
+package Chapter2.Line;
+import Chapter2.ThreeDimensionalPoint.ThreeDimensionalPoint;
 
 public class Line {
     private ThreeDimensionalPoint firstPoint;

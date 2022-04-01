@@ -1,4 +1,4 @@
-package ThreeDimensionalPoint;
+package Chapter2.ThreeDimensionalPoint;
 import java.lang.Math;
 
 public class ThreeDimensionalPoint {

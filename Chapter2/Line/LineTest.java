@@ -1,5 +1,5 @@
-package Line;
-import Line.Line;
+package Chapter2.Line;
+import Chapter2.Line.Line;
 
 public class LineTest {
 

@@ -1,4 +1,4 @@
-package QuadraticExpression;
+package Chapter2.QuadraticExpression;
 import java.lang.Math;
 
 public class QuadraticExpression {

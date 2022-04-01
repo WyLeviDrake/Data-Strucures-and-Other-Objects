@@ -1,4 +1,4 @@
-package Lock;
+package Chapter2.Lock;
 public class Lock {
 
     private int x;

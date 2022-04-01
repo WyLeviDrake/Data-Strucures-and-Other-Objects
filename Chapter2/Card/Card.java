@@ -1,4 +1,4 @@
-package Card;
+package Chapter2.Card;
 
 
 public class Card {
