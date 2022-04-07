@@ -27,12 +27,12 @@ public class DoubleArraySeq {
         if (isCurrent()) {
             return sequence[current];
         } else {
-            throw new IllegalAccessError("This is not a used element.");
+            throw new NullPointerException("This is not a used element.");
         }
 
     }
     public boolean isCurrent() {
-        if (current < (usedElements - 1) && current >= 0) {
+        if (current < (usedElements) && current >= 0) {
             return true;
         } else {
             return false;
@@ -53,24 +53,41 @@ public class DoubleArraySeq {
     }
 
     public void addBefore(double element) {
+        if (usedElements == 0) {
+            sequence[0] = element;
+        } else {        
+            shiftSequenceBefore();
+            sequence[current] = element;
+        }
+        usedElements++;
+    } 
+    private void shiftSequenceBefore() {
         for (int i = usedElements; i > current; i--) {
             sequence[i] = sequence[i - 1];
         }
-        sequence[current - 1] = element;
-        usedElements++;
     }
     public void addAfter(double element) {   
+        if (usedElements == 0){
+            sequence[0] = element;
+        } else {
+            shiftSequenceAfter();  
+            sequence[current + 1] = element;
+        }
+        usedElements++;
+    }
+    private void shiftSequenceAfter() {
         for (int i = usedElements; i > (current + 1); i--) {
             sequence[i] = sequence[i - 1];
-        }     
-        sequence[current + 1] = element;
-        usedElements++;
+        }   
     }
     public void removeCurrent() {
         if (isCurrent()) {
             for (int i = current; i < usedElements; i++) {
                 sequence[i] = sequence[i + 1];
             }
+            usedElements--;
+        } else {
+            throw new NullPointerException("This is not a used element.");
         }
     }
     public void trimToSize() {
