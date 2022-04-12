@@ -53,6 +53,7 @@ public class DoubleArraySeq {
     }
 
     public void addBefore(double element) {
+        expandSequence();
         if (usedElements == 0) {
             sequence[0] = element;
         } else {        
@@ -66,7 +67,8 @@ public class DoubleArraySeq {
             sequence[i] = sequence[i - 1];
         }
     }
-    public void addAfter(double element) {   
+    public void addAfter(double element) {  
+        expandSequence(); 
         if (usedElements == 0){
             sequence[0] = element;
         } else {
@@ -79,6 +81,22 @@ public class DoubleArraySeq {
         for (int i = usedElements; i > (current + 1); i--) {
             sequence[i] = sequence[i - 1];
         }   
+    }
+    private boolean isFull() {
+        if (usedElements >= sequence.length) {
+            return true;
+        } else { 
+            return false;
+        }
+    }
+    private void expandSequence() {
+        if (isFull() == true) {
+            double [] expand = new double[(usedElements * 2)];
+            for (int i = 0; i < usedElements; i++) {
+                expand[i] = sequence[i];
+            }
+            sequence = expand;
+        }
     }
     public void removeCurrent() {
         if (isCurrent()) {

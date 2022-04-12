@@ -43,11 +43,11 @@ public class DoubleArraySeqTest {
             System.out.println("passed.");
         }
     }
-
     public static void getCurrent_returnsSequenceCurrent_givenIsCurrentIsTrue() {
         
 
     }
+
     public static void main(String[] args){
         DoubleArraySeq_constructsEmptySequence_givenNoInput();
         getCurrent_throwsNullPointerException_givenIsCurrentIsFalse();
