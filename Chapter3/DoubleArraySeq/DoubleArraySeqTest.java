@@ -44,8 +44,23 @@ public class DoubleArraySeqTest {
         }
     }
     public static void getCurrent_returnsSequenceCurrent_givenIsCurrentIsTrue() {
+        test.start();
+        System.out.println("getCurrent returns sequence:");
+        if (test.getCurrent() == 1) {
+            System.out.println("passed.");
+        } else {
+            System.out.println("failed.");
+        }
         
-
+    }
+    public static void DoubleArraySeq_returnsIllegalArgumentException_givenNegativeInput() {
+        System.out.println("Constructor error test:");
+        try {
+            test = new DoubleArraySeq(-1);
+            System.out.println("failed.");
+        } catch (IllegalArgumentException e) {
+            System.out.println("passed");
+        }
     }
 
     public static void main(String[] args){
@@ -53,5 +68,7 @@ public class DoubleArraySeqTest {
         getCurrent_throwsNullPointerException_givenIsCurrentIsFalse();
         addBefore_addsElement_givenEmptySequence();
         removeCurrent_throwsNullPointerException_givenIsCurrentisFalse();
+        getCurrent_returnsSequenceCurrent_givenIsCurrentIsTrue();
+        DoubleArraySeq_returnsIllegalArgumentException_givenNegativeInput();
     }
 }
