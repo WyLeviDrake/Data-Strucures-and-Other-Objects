@@ -1,5 +1,5 @@
-package Chapter2.QuadraticExpression;
-import Chapter2.QuadraticExpression.QuadraticExpression;
+package chapter2.QuadraticExpression;
+import chapter2.QuadraticExpression.QuadraticExpression;
 
 public class QuadraticExpressionTest {
     

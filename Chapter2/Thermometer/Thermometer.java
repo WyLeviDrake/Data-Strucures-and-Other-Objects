@@ -1,4 +1,4 @@
-package Chapter2.Thermometer;
+package chapter2.Thermometer;
 
 
 public class Thermometer {

@@ -1,4 +1,4 @@
-package Chapter2.Statistician;
+package chapter2.Statistician;
 public class Statistician {
     
     private double length;

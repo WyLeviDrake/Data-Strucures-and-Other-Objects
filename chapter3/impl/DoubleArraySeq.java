@@ -1,4 +1,4 @@
-package Chapter3.DoubleArraySeq;
+package chapter3.impl;
 
 public class DoubleArraySeq {
 
@@ -32,11 +32,7 @@ public class DoubleArraySeq {
 
     }
     public boolean isCurrent() {
-        if (current < (usedElements) && current >= 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return current < (usedElements) && current >= 0;
     }
     // This code isnt actually required and more of a headache than it is worth. Leaving it here to finish later.
     // public double getSequence(DoubleArraySeq numbers) {
@@ -83,14 +79,10 @@ public class DoubleArraySeq {
         }   
     }
     private boolean isFull() {
-        if (usedElements >= sequence.length) {
-            return true;
-        } else { 
-            return false;
-        }
+        return (usedElements >= sequence.length);
     }
     private void expandSequence() {
-        if (isFull() == true) {
+        if (isFull()) {
             double [] expand = new double[(usedElements * 2)];
             for (int i = 0; i < usedElements; i++) {
                 expand[i] = sequence[i];
